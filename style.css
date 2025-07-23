@@ -61,3 +61,29 @@ footer {
   font-size: 14px;
   color: #888;
 }
+
+
+/* RESPONSIVE: Tampilan HP dan layar kecil */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
