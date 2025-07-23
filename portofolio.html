@@ -6,18 +6,67 @@
   <title>Portofolio</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .btn {
-      display: inline-block;
-      padding: 8px 16px;
-      margin-top: 10px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
     }
 
-    .btn:hover {
-      background-color: #45a049;
+    .portfolio-item {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.02);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .portfolio-item .content {
+      padding: 15px;
+    }
+
+    .portfolio-item h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .portfolio-item a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #555;
     }
   </style>
 </head>
@@ -26,29 +75,33 @@
     <a href="index.html">Beranda</a>
     <a href="tentang.html">Tentang</a>
     <a href="galeri.html">Galeri</a>
-    <a href="portofolio.html" class="active">Portofolio</a>
+    <a href="portofolio.html">Portofolio</a>
   </nav>
 
   <div class="container">
     <h1>Portofolio Saya</h1>
+    <div class="portfolio-grid">
+      
+      <!-- Item 1 -->
+      <div class="portfolio-item">
+        <img src="img/website1.jpg" alt="Website Project" />
+        <div class="content">
+          <h3>Website Portofolio</h3>
+          <p>Proyek web pribadi menggunakan HTML, CSS, dan GitHub Pages.</p>
+          <a href="index.html" target="_blank">Lihat Proyek</a>
+        </div>
+      </div>
 
-    <!-- Tombol Arahkan ke Bagian Bawah -->
-    <a class="btn" href="#proyekWebsite">Lihat Proyek Website</a>
-    <a class="btn" href="#desainPoster">Lihat Desain Poster</a>
+      <!-- Item 2 -->
+      <div class="portfolio-item">
+        <img src="img/desain1.jpg" alt="Desain Poster" />
+        <div class="content">
+          <h3>Desain Poster</h3>
+          <p>Contoh desain poster digital yang dibuat untuk latihan desain grafis.</p>
+          <a href="img/desain1.jpg" target="_blank">Lihat Gambar</a>
+        </div>
+      </div>
 
-    <!-- Proyek Website -->
-    <div id="proyekWebsite" style="margin-top: 60px;">
-      <h2>1. Proyek Website</h2>
-      <img src="img/website1.jpg" alt="Contoh Website" width="300" />
-      <p>Contoh tampilan website yang saya buat untuk belajar front-end development menggunakan HTML dan CSS.</p>
-    </div>
-
-    <!-- Desain Poster -->
-    <div id="desainPoster" style="margin-top: 60px;">
-      <h2>2. Desain Poster</h2>
-      <img src="img/desain1.jpg" alt="Desain Poster" width="300" />
-      <p>Contoh desain poster sederhana yang saya buat untuk belajar dasar-dasar desain grafis.</p>
-      <a class="btn" href="img/desain1.jpg" target="_blank">Lihat Gambar Penuh</a>
     </div>
   </div>
 
