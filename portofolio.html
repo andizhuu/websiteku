@@ -2,9 +2,40 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .portofolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 30px;
+    }
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 0.5rem;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #0077cc;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -17,14 +48,19 @@
   <div class="container">
     <h1>Portofolio Saya</h1>
     <div class="portofolio">
-      <div class="item">
-        <h3>Proyek 1</h3>
-        <p>Membuat website statis pribadi dengan GitHub Pages dan Termux.</p>
+      <div class="card">
+        <img src="img/website1.jpg" alt="Proyek 1">
+        <h3>Website Portfolio</h3>
+        <p>Website pribadi sederhana dengan HTML, CSS, dan GitHub Pages.</p>
+        <a href="https://andizhuu.github.io/websiteku/" target="_blank">Lihat Proyek →</a>
       </div>
-      <div class="item">
-        <h3>Proyek 2</h3>
-        <p>Menambahkan galeri dan form kontak sebagai bagian dari pembelajaran.</p>
+      <div class="card">
+        <img src="img/desain1.jpg" alt="Proyek 2">
+        <h3>Desain Poster</h3>
+        <p>Desain promosi menggunakan Canva dan aplikasi Android.</p>
+        <a href="#">Lihat Gambar →</a>
       </div>
+      <!-- Tambahkan proyek lainnya di sini -->
     </div>
   </div>
 
