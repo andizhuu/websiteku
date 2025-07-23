@@ -5,6 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Beranda</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #e0f0ff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0055cc;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    img {
+      max-width: 200px;
+      border-radius: 100px;
+      margin: 20px 0;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      max-width: 400px;
+      margin: 8px auto;
+      padding: 10px;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #0055cc;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003f99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      background-color: #e0f0ff;
+      color: #333;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -16,14 +98,14 @@
 
   <div class="container">
     <h1 class="fade-in">Halo, saya Andi</h1>
-    <img src="img/foto_profil.jpg" alt="Foto Profil" class="fade-in" style="max-width: 200px; border-radius: 100px;" />
+    <img src="img/foto_profil.jpg" alt="Foto Profil" class="fade-in" />
     <p class="fade-in">Ini adalah website pribadi saya untuk belajar membuat web menggunakan GitHub dan Termux.</p>
 
     <h2 class="fade-in">Kontak Saya</h2>
     <form action="https://formspree.io/f/mqalpyaw" method="POST" class="fade-in">
-      <input type="text" name="nama" placeholder="Nama" required><br>
-      <input type="email" name="email" placeholder="Email" required><br>
-      <textarea name="pesan" placeholder="Pesan Anda..." required></textarea><br>
+      <input type="text" name="nama" placeholder="Nama" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="pesan" placeholder="Pesan Anda..." required></textarea>
       <input type="hidden" name="_redirect" value="https://andizhuu.github.io/websiteku/terima-kasih.html">
       <button type="submit">Kirim</button>
     </form>
