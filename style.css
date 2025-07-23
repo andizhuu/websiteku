@@ -5,125 +5,112 @@
   box-sizing: border-box;
 }
 
-/* Body umum */
+/* Body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
 }
 
 /* Navigasi */
 nav {
-  background-color: #1e88e5;
-  padding: 10px 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 nav a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  margin: 0 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #1565c0;
+  color: #00ffff;
 }
 
-/* Kontainer utama */
+/* Container konten utama */
 .container {
-  max-width: 800px;
-  margin: 30px auto;
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #1e1e1e;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Judul */
-h1, h2 {
-  color: #1e88e5;
-  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* Gambar profil */
-img {
-  max-width: 200px;
+.container img {
+  width: 200px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 20px auto;
+  border: 4px solid #00ffff;
 }
 
-/* Formulir kontak */
-form input,
-form textarea {
+/* Form Kontak */
+form {
+  margin-top: 30px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
-  padding: 10px;
-  margin: 6px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-form button {
-  background-color: #1e88e5;
-  color: white;
-  padding: 10px 20px;
+  padding: 12px;
+  margin: 10px 0;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
-  transition: background-color 0.3s;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
 }
 
-form button:hover {
-  background-color: #1565c0;
+button {
+  background-color: #00ffff;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #00cccc;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  margin-top: 30px;
-  background-color: #1e88e5;
-  color: white;
-  font-size: 0.9em;
-  border-radius: 0 0 12px 12px;
+  background-color: #1f1f1f;
+  color: #888;
+  margin-top: 40px;
 }
 
 /* Animasi */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .fade-in {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1.5s ease-in-out both;
 }
 
-/* Responsif untuk layar kecil */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
 @media (max-width: 600px) {
-  .container {
-    margin: 10px;
-    padding: 15px;
+  nav a {
+    display: block;
+    margin: 10px 0;
   }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  img {
-    max-width: 150px;
+  .container img {
+    width: 150px;
   }
 }
