@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* Reset dan font */
 body, h1, h2, p, a {
   margin: 0;
   padding: 0;
@@ -11,17 +11,21 @@ body {
   line-height: 1.6;
 }
 
+/* NAVIGASI */
 nav {
   background-color: #0077cc;
-  padding: 15px;
-  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
+  font-size: 0.95em;
   transition: color 0.3s ease;
 }
 
@@ -29,6 +33,7 @@ nav a:hover {
   color: #ffcc00;
 }
 
+/* Container utama */
 .container {
   max-width: 800px;
   margin: 30px auto;
@@ -39,15 +44,17 @@ nav a:hover {
   text-align: center;
 }
 
+/* Gambar */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 20px auto;
+  border-radius: 10px;
 }
 
-form input,
-form textarea {
+/* Formulir */
+form input, form textarea {
   width: 100%;
   max-width: 400px;
   padding: 10px;
@@ -74,6 +81,7 @@ button:hover {
   background-color: #005fa3;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -82,6 +90,7 @@ footer {
   margin-top: 30px;
 }
 
+/* Optional: Animasi jika ingin kembali */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -92,32 +101,5 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Responsif untuk layar kecil (HP) */
-@media (max-width: 600px) {
-  nav {
-    padding: 10px;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .container {
-    margin: 15px;
-    padding: 15px;
-  }
-
-  form input,
-  form textarea {
-    font-size: 0.95em;
-  }
-
-  button {
-    width: 100%;
-    max-width: 400px;
   }
 }
